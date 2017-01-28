@@ -1,5 +1,48 @@
-# odoprave
+# Alternatívne odoprave - BETA [![Slack Slovensko.Digital](https://img.shields.io/badge/Slack-Slovensko.Digital%20-brightgreen.svg)](http://slack.slovensko.digital/)
 
-R&amp;D visualization project based on public data from odoprave.info
+Výskumný vizualizačný projekt, ktorý používa verejné dostupné dáta zo štátneho
+portálu odoprave.info. Nekomerčne dostupné na
+https://odoprave.github.io/odoprave/ .
 
-https://odoprave.github.io/odoprave/
+
+# V čom je tento projekt lepší ako štátne odoprave.info?
+
+Niektoré body môžu býť subjektívne, prípadne môžu závisieť na rýchlosti
+použitého pripojenia a skúsenostiach používateľa. Nateraz:
+
+- otvorený kód / vývoj: možnosť jednoducho zlepšiť funkcionalitu
+- cena prevádzky: bez nákladov, použité bezplatné [GitHub Pages] https://pages.github.com/
+- rýchlosť načítania: [1,4 sek](https://www.webpagetest.org/result/170128_7W_3DD/) verzus [8,4 sek](https://www.webpagetest.org/result/170128_48_35Z/)
+- použiteľnosť
+  - mapa si pamätá poslednú pozíciu
+  - pozícia je ukladaná aj v URL a histórii prehliadača
+
+
+# Ako prispieť?
+
+Preferovaný je [kolaboratívny model vývoja na GitHub-e](https://help.github.com/categories/collaborating-with-issues-and-pull-requests/).
+Projekt je zatiaľ v BETA verzii, takže pull requesty sú vhodnejšie v tejto fáze.
+
+
+# Kde nájsť inšpiráciu
+
+Inšpiráciu na vylepšenia UI/UX/funkcionalitu odporúčam hľadať v projektoch:
+
+- https://www.google.sk/maps
+- https://www.waze.com/
+- https://mapy.cz/
+
+
+# Použité projekty
+
+Nateraz má projekt svoju podobu vďaka:
+
+- https://github.com/openlayers/openlayers
+- https://github.com/Turbo87/sidebar-v2
+- https://github.com/walkermatt/ol3-layerswitcher
+- https://github.com/FortAwesome/Font-Awesome
+
+
+# Licencia
+
+[GNU AFFERO GENERAL PUBLIC LICENSE (AGPL)](https://raw.githubusercontent.com/odoprave/odoprave/gh-pages/LICENSE)
