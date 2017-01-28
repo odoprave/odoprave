@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="sk"><head>
-    <title>Alternatívne odoprave.info</title>
+    <title>Alternatívne odoprave</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <link href="http://odoprave.monitoringart.com/" rel="canonical" />
+    <link href="https://odoprave.github.io/odoprave/" rel="canonical" />
     <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
     <link href="css/ol.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="css/ol3-sidebar.css" type="text/css" />
     <link rel="stylesheet" href="css/style.css" type="text/css" />
-    <!-- link rel="stylesheet" href="css/ol3-layerswitcher.css" type="text/css" / -->
     <style>
         body {
             padding: 0;
@@ -65,16 +64,20 @@
 
             <div class="sidebar-pane" id="direction">
                 <h1 class="sidebar-header">Trasa<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
+                <p>Čakáme na dobrovoľníka, ktorý implementuje túto funkcionalitu.
+                Zatiaľ odporúčame použiť <a href="https://www.google.sk/maps?source=tldsi&hl=sk" target="_blank">Google maps</a>.</p>
             </div>
 
             <div class="sidebar-pane" id="transport">
                 <h1 class="sidebar-header">Cestovné poriadky<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
+                <p>Čakáme na dobrovoľníka, ktorý implementuje túto funkcionalitu.
+                Zatiaľ odporúčame použiť <a href="http://cp.atlas.sk/vlakbus/spojenie/" target="_blank">Cp.sk</a>.</p>
             </div>
 
             <div class="sidebar-pane" id="feedback">
                 <h1 class="sidebar-header">Spätná väzba<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
                 <p>
-                <b>Jedným klikom</b> nám prosím poskytnite Váš názor na alternatívne odoprave.info:<br />
+                <b>Jedným klikom</b> nám prosím poskytnite Váš názor na alternatívne odoprave:<br />
                 <i class="fa fa-thumbs-up" style="color: green; font-size: 200%;"></i>&nbsp;
                 <i class="fa fa-thumbs-down" style="color: red; font-size: 200%;"></i>
                 </p>
@@ -99,18 +102,16 @@
             <div class="sidebar-pane" id="info">
                 <h1 class="sidebar-header">O projekte<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
                 <p>
-                Aký sa snaží byť výskumný projekt Alternatívne odoprave.info?
+                Aký sa snaží byť výskumný projekt Alternatívne odoprave?
                 <ul>
                   <li>prívetivý pre používateľov</li>
                   <li>nenáročný na prevádzkové náklady</li>
-                  <li>otvorený vývoju</li>
-                  <li>transparentný</li>
+                  <li>otvorený komunitnému vývoju</li>
                   <li>nekomerčný</li>
-                  <li>moderný</li>
                 </ul>
                 </p>
-                <p>Chceš sa zapojiť?<p>
-                Navštív <a href="https://github.com/jangaraj/odoprave" target="_blank">github.com/jangaraj/odoprave</a>
+                <p>Chceš sa zapojiť a vylepšiť funkcionalitu?<p>
+                Navštív <a href="https://github.com/odoprave/odoprave" target="_blank">github.com/odoprave/odoprave</a>
             </div>
         </div>
     </div>
@@ -120,7 +121,7 @@
     <script src="js/ol.js" type="text/javascript"></script>
     <script src="js/ol3-sidebar.min.js"></script>
     <!-- The line below is only needed for old environments like Internet Explorer and Android 4.x -->
-    <!-- script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script -->
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
     <script src="js/ol3-layerswitcher.js"></script>
 
     <script>
@@ -131,8 +132,8 @@
     ga('create', 'UA-90652142-2', 'auto');
     ga('send', 'pageview');
 
-    // available layers - https://odoprave.info/gis/configuration/layer
-    // features - https://odoprave.info/geoserver/nsdi/wms?REQUEST=GetFeatureInfo&EXCEPTIONS=application%2Fjson&BBOX=2035059.4410645328%2C6261721.357121639%2C2191602.4749925737%2C6418264.39104968&SERVICE=WMS&INFO_FORMAT=application%2Fjson&QUERY_LAYERS=nsdi%3Atraffic_event%2Cnsdi%3Auds&FEATURE_COUNT=50&TRANSPARENT=true&Layers=nsdi%3Atraffic_event%2Cnsdi%3Auds&WIDTH=256&HEIGHT=256&format=image%2Fpng&CQL_FILTER=(traffic_event_status%3D%27active%27)%20or%20(traffic_event_status%3D%27definedByValidityTimeSpec%27%20AND%20((valid_to%20%3E%3D%20%272017-01-27T23%3A45%3A12%2B0000%27%20and%20valid_from%20%3C%3D%20%272017-01-27T23%3A45%3A12%2B0000%27)%20OR%20(valid_to%20IS%20NULL%20and%20valid_from%20%3C%3D%20%272017-01-27T23%3A45%3A12%2B0000%27)))%20OR%20(traffic_event_status%3D%27definedByValidityTimeSpec%27%20AND%20valid_from%20%3E%20%272017-01-27T23%3A45%3A12%2B0000%27)%3B1%3D1&VERSION=1.1.1&styles=&srs=EPSG%3A3857&X=235&Y=245
+    // layers   - https://odoprave.info/gis/configuration/layer
+    // features - https://odoprave.info/geoserver/nsdi/wms?REQUEST=GetFeatureInfo&EXCEPTIONS=application/json&BBOX=2035059.4410645328,6261721.357121639,2191602.4749925737,6418264.39104968&SERVICE=WMS&INFO_FORMAT=application/json&QUERY_LAYERS=nsdi:traffic_event,nsdi:uds&FEATURE_COUNT=50&TRANSPARENT=true&Layers=nsdi:traffic_event,nsdi:uds&WIDTH=256&HEIGHT=256&format=image/png&CQL_FILTER=(traffic_event_status='active') or (traffic_event_status='definedByValidityTimeSpec' AND ((valid_to >= '2017-01-27T23:45:12+0000' and valid_from <= '2017-01-27T23:45:12+0000') OR (valid_to IS NULL and valid_from <= '2017-01-27T23:45:12+0000'))) OR (traffic_event_status='definedByValidityTimeSpec' AND valid_from > '2017-01-27T23:45:12+0000');1=1&VERSION=1.1.1&styles=&srs=EPSG:3857&X=235&Y=245
 
     try {
         var zoom = 8;
@@ -163,15 +164,6 @@
           button.innerHTML = '<i class="fa fa-dot-circle-o"></i>';
           button.title = options.tipLabel;
           button.id = 'geolocation';
-
-          /*
-          var this_ = this;
-          var geoLocate = function() {
-            geolocation.setTracking(this.checked);
-          };
-          button.addEventListener('click', geoLocate, false);
-          button.addEventListener('touchstart', geoLocate, false);
-          */
 
           var element = document.createElement('div');
           element.className = 'geolocation ol-selectable ol-control';
@@ -240,17 +232,10 @@
           options.attributions = [new ol.Attribution({
              html: "Mapa &copy; NSDI <a href='https://odoprave.info' target='_blank'>odoprave.info</a>"
           })];
-          // REST hacking because we want to use CDN caching
-          // http://geoserver.monitoringart.com:8880/rest/nsdi:base_raster_night/EPSG:900913/GetTile/1.0.0/png/EPSG:900913:12/2259/1415/map.png
-          // http://fastly.monitoringart.com/rest/nsdi:base_raster_night/EPSG:900913/GetTile/1.0.0/png/EPSG:900913:12/2259/1415/map.png
-          // https://odoprave.info/geoserver/gwc/service/wmts?layer=nsdi:base_raster_night&tilematrixset=EPSG:900913&Service=WMTS&Request=GetTile&Version=1.0.0&Format=image%2Fpng&TileMatrix=EPSG:900913:12&TileCol=2259&TileRow=1415
+
+          // REST template, because we want to use CDN caching feature
           options.requestEncoding = 'REST';
           options.urls[0] = backend_server + '/rest/1d/{Layer}/{TileMatrixSet}/GetTile/1.0.0/png/{TileMatrix}/{TileCol}/{TileRow}/map.png';
-          //rewrite '/rest/(.*)/(.*)/(.*)/(.*)/(.*)/(.*)/(.*)/(.*)/map.*' /geoserver/gwc/service/wmts?layer=$1&tilematrixset=$2&Service=WMTS&Request=$3&Version=$4&Format=image%2F$5&TileMatrix=$6&TileCol=$7&TileRow=$8 break;
-
-          //options.urls[0] = backend_server + '/rest/base_raster/{TileCol}/{TileRow}/map.png';
-          //rewrite '/rest/(.*)/(.*)/(.*)/map.(.*)' /geoserver/gwc/service/wmts?layer=nsdi:$1&tilematrixset=EPSG:900913&Service=WMTS&Request=GetTile&Version=1.0.0&Format=image%2F$4&TileMatrix=EPSG:900913:12&TileCol=$2&TileRow=$3 break;
-          //http://geoserver.monitoringart.com:8880/rest/base_raster_night/2259/1415/map.png
 
           var options2 = ol.source.WMTS.optionsFromCapabilities(result,
               {layer: 'nsdi:base_raster_night', matrixSet: 'EPSG:900913'});
@@ -466,7 +451,7 @@
            // todo
            alert("Geolocation problem: " + error.message);
            ga('send', 'exception', {
-             'exDescription': err.message,
+             'exDescription': "Geolocation problem: " + error.message,
              'exFatal': false
            });
          });
