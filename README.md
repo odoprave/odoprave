@@ -1,8 +1,11 @@
 # Alternatívne odoprave - BETA [![Slack Slovensko.Digital](https://img.shields.io/badge/Slack-Slovensko.Digital%20-brightgreen.svg)](http://slack.slovensko.digital/)
 
 Výskumný vizualizačný projekt, ktorý používa verejné dostupné dáta zo štátneho
-portálu odoprave.info. Nekomerčne dostupné na
-https://odoprave.github.io/odoprave/ .
+portálu odoprave.info.
+
+Verejne dostupné na [https://odoprave.github.io/odoprave/](https://odoprave.github.io/odoprave/).
+
+Použité technológie: HTML/CSS/JS.
 
 
 # V čom je tento projekt lepší ako štátne odoprave.info?
@@ -12,7 +15,7 @@ použitého pripojenia a skúsenostiach používateľa. Nateraz:
 
 - otvorený kód / vývoj: možnosť jednoducho zlepšiť funkcionalitu
 - cena prevádzky: bez nákladov, použité bezplatné [GitHub Pages] https://pages.github.com/
-- rýchlosť načítania: [1,4 sek](https://www.webpagetest.org/result/170128_7W_3DD/) verzus [8,4 sek](https://www.webpagetest.org/result/170128_48_35Z/)
+- rýchlosť načítania: alternatívne odoprave [1,4 sek](https://www.webpagetest.org/result/170128_7W_3DD/) verzus štátne odoprave.info [8,4 sek](https://www.webpagetest.org/result/170128_48_35Z/)
 - použiteľnosť
   - mapa si pamätá poslednú pozíciu
   - pozícia je ukladaná aj v URL a histórii prehliadača
