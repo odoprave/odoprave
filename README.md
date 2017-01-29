@@ -36,6 +36,13 @@ Inšpiráciu na vylepšenia UI/UX/funkcionalitu odporúčam hľadať v projektoc
 - https://mapy.cz/
 
 
+# Experimentálne
+
+1.) https://odoprave.github.io/odoprave/nsdi-google-traffic-comparison/
+
+Vrstvy aktuálnej premávky z NSDI a Google na jednej mape
+
+
 # Použité projekty
 
 Nateraz má projekt svoju podobu vďaka:
@@ -48,4 +55,4 @@ Nateraz má projekt svoju podobu vďaka:
 
 # Licencia
 
-[GNU AFFERO GENERAL PUBLIC LICENSE (AGPL)](https://raw.githubusercontent.com/odoprave/odoprave/gh-pages/LICENSE)
+[GNU AFFERO GENERAL PUBLIC LICENSE (AGPL)](https://github.com/odoprave/odoprave/blob/gh-pages/LICENSE)

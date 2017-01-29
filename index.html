@@ -129,6 +129,8 @@
 
     // layers   - https://odoprave.info/gis/configuration/layer
     // features - https://odoprave.info/geoserver/nsdi/wms?REQUEST=GetFeatureInfo&EXCEPTIONS=application/json&BBOX=2035059.4410645328,6261721.357121639,2191602.4749925737,6418264.39104968&SERVICE=WMS&INFO_FORMAT=application/json&QUERY_LAYERS=nsdi:traffic_event,nsdi:uds&FEATURE_COUNT=50&TRANSPARENT=true&Layers=nsdi:traffic_event,nsdi:uds&WIDTH=256&HEIGHT=256&format=image/png&CQL_FILTER=(traffic_event_status='active') or (traffic_event_status='definedByValidityTimeSpec' AND ((valid_to >= '2017-01-27T23:45:12+0000' and valid_from <= '2017-01-27T23:45:12+0000') OR (valid_to IS NULL and valid_from <= '2017-01-27T23:45:12+0000'))) OR (traffic_event_status='definedByValidityTimeSpec' AND valid_from > '2017-01-27T23:45:12+0000');1=1&VERSION=1.1.1&styles=&srs=EPSG:3857&X=235&Y=245
+    // services - https://odoprave.info/gis/configuration/service
+    // https://odoprave.info/pbe/api/v1/base/enums/texts
 
     try {
         var zoom = 8;
