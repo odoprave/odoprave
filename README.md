@@ -38,7 +38,7 @@ Inšpiráciu na vylepšenia UI/UX/funkcionalitu odporúčam hľadať v projektoc
 
 # Experimentálne
 
-1.) https://odoprave.github.io/odoprave/nsdi-google-traffic-comparison/
+1.) https://odoprave.github.io/odoprave/labs/nsdi-google-traffic-comparison/
 
 Vrstvy aktuálnej premávky z NSDI a Google na jednej mape
 
