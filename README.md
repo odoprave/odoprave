@@ -7,6 +7,10 @@ Verejne dostupné na [https://odoprave.github.io/odoprave/](https://odoprave.git
 
 Použité technológie: HTML/CSS/JS.
 
+![Alternatívne odoprave](https://raw.githubusercontent.com/github.com/odoprave/odoprave/master/doc/alternativne-odoprave-demo.gif)
+![Alternatívne odoprave na mobile](https://raw.githubusercontent.com/github.com/odoprave/odoprave/master/doc/alternativne-odoprave-demo.gif)
+
+
 
 # V čom je tento projekt lepší ako štátne odoprave.info?
 
@@ -38,9 +42,22 @@ Inšpiráciu na vylepšenia UI/UX/funkcionalitu odporúčam hľadať v projektoc
 
 # Experimentálne
 
-1.) https://odoprave.github.io/odoprave/labs/nsdi-google-traffic-comparison/
+**Porovnanie premávky NSDI verzus Google**
+https://odoprave.github.io/odoprave/labs/nsdi-google-traffic-comparison/
 
-Vrstvy aktuálnej premávky z NSDI a Google na jednej mape
+Vrstvy aktuálnej premávky z NSDI a Google na jednej mape pre jednoduchšie
+vzájomné porovnanie:
+
+![Porovnanie premávky NSDI/Google](https://raw.githubusercontent.com/github.com/odoprave/odoprave/master/labs/nsdi-google-traffic-comparison/nsdi-google-traffic-comparison.gif)
+
+
+**Odoprave analytics**
+
+Zatiaľ nepublikované POC na vizualizáciu "najhorúcejších" miest z histórie
+zaznamenaných udalostí premávky zo štátneho portálu odoprave.info
+(približne 3,5 tisíc udalostí).
+
+![Odoprave analytics](https://raw.githubusercontent.com/github.com/odoprave/odoprave/master/labs/odoprave-analytics.gif)
 
 
 # Použité projekty
