@@ -267,18 +267,21 @@
                             title: 'Štandarná NSDI',
                             type: 'base',
                             visible: true,
+                            preload: 10,
                             source: new ol.source.WMTS(options)
                         }),
                         new ol.layer.Tile({
                             title: 'Nočná NSDI',
                             type: 'base',
                             visible: false,
+                            preload: 10,
                             source: new ol.source.WMTS(options2)
                         }),
                         new ol.layer.Tile({
                             title: 'Letecká NSDI',
                             type: 'base',
                             visible: false,
+                            preload: 10,
                             source: new ol.source.WMTS(options3)
                         }),
                         new ol.layer.Tile({
