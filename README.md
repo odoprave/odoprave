@@ -7,8 +7,9 @@ Verejne dostupné na [https://odoprave.github.io/odoprave/](https://odoprave.git
 
 Použité technológie: HTML/CSS/JS.
 
-![Alternatívne odoprave](https://raw.githubusercontent.com/github.com/odoprave/odoprave/gh-pages/doc/alternativne-odoprave-demo.gif)
-![Alternatívne odoprave na mobile](https://raw.githubusercontent.com/github.com/odoprave/odoprave/gh-pages/doc/alternativne-odoprave-demo-mobil.gif)
+![Alternatívne odoprave](https://raw.githubusercontent.com/odoprave/odoprave/gh-pages/doc/alternativne-odoprave-demo.gif)
+![Alternatívne odoprave na mobile](https://raw.githubusercontent.com/odoprave/odoprave/gh-pages/doc/alternativne-odoprave-demo-mobil.gif)
+
 
 
 
@@ -48,7 +49,7 @@ https://odoprave.github.io/odoprave/labs/nsdi-google-traffic-comparison/
 Vrstvy aktuálnej premávky z NSDI a Google na jednej mape pre jednoduchšie
 vzájomné porovnanie:
 
-![Porovnanie premávky NSDI/Google](https://raw.githubusercontent.com/github.com/odoprave/odoprave/gh-pages/labs/nsdi-google-traffic-comparison/nsdi-google-traffic-comparison.gif)
+![Porovnanie premávky NSDI/Google](https://raw.githubusercontent.com/odoprave/odoprave/gh-pages/labs/nsdi-google-traffic-comparison/nsdi-google-traffic-comparison.gif)
 
 
 **Odoprave analytics**
@@ -57,7 +58,7 @@ Zatiaľ nepublikované POC na vizualizáciu "najhorúcejších" miest z históri
 zaznamenaných udalostí premávky zo štátneho portálu odoprave.info
 (približne 3,5 tisíc udalostí).
 
-![Odoprave analytics](https://raw.githubusercontent.com/github.com/odoprave/odoprave/gh-pages/labs/odoprave-analytics.gif)
+![Odoprave analytics](https://raw.githubusercontent.com/odoprave/odoprave/gh-pages/labs/odoprave-analytics.gif)
 
 
 # Použité projekty
