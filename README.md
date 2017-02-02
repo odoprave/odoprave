@@ -1,6 +1,6 @@
 # Alternatívne odoprave - BETA
 
-[![Docker Automated buil](https://img.shields.io/docker/automated/odoprave/odoprave.svg)]() Komunikácia: [![Slack Slovensko.Digital](https://img.shields.io/badge/Slack-Slovensko.Digital%20-brightgreen.svg)](http://slack.slovensko.digital/)
+[![Docker Automated buil](https://img.shields.io/docker/automated/odoprave/odoprave.svg)](https://hub.docker.com/r/odoprave/odoprave/) Komunikácia: [![Slack Slovensko.Digital](https://img.shields.io/badge/Slack-Slovensko.Digital%20-brightgreen.svg)](http://slack.slovensko.digital/)
 
 Výskumný vizualizačný projekt, ktorý používa verejne dostupné dáta zo štátneho
 portálu odoprave.info.
