@@ -21,6 +21,7 @@ docker run --name odoprave -d -p 80:80 odoprave/odoprave
 # Náhľad
 
 [![Alternatívne odoprave](https://raw.githubusercontent.com/odoprave/odoprave/gh-pages/doc/alternativne-odoprave-demo.gif)](https://odoprave.github.io/odoprave/)
+
 [![Alternatívne odoprave na mobile](https://raw.githubusercontent.com/odoprave/odoprave/gh-pages/doc/alternativne-odoprave-demo-mobil.gif)](https://odoprave.github.io/odoprave/)
 
 # V čom je tento projekt lepší ako štátne odoprave.info?
@@ -34,6 +35,7 @@ použitého pripojenia a skúsenostiach používateľa. Nateraz:
 - použiteľnosť
   - mapa si pamätá poslednú pozíciu
   - pozícia je ukladaná aj v URL a histórii prehliadača
+  - možnosť jednoduchej používateľskej spätnej väzby
 
 
 # Ako prispieť?
