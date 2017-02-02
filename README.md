@@ -9,7 +9,7 @@ Verejne dostupné na [https://odoprave.github.io/odoprave/](https://odoprave.git
 
 Použité technológie: HTML/CSS/JS.
 
-# Naštartuj si svoje odoprave
+# Naštartuj si vlastné odoprave
 
 Projekt je k dispozícii aj ako Docker image, založený na ngnix (ktorý má aj
 úlohu reverse proxy, pri komunikácii so štátnym odoprave.info):
@@ -20,7 +20,7 @@ docker run --name odoprave -d -p 80:80 odoprave/odoprave
 
 # Náhľad
 
-[![Alternatívne odoprave](https://raw.githubusercontent.com/odoprave/odoprave/gh-pages/doc/alternativne-odoprave-demo.gif)(https://odoprave.github.io/odoprave/)
+[![Alternatívne odoprave](https://raw.githubusercontent.com/odoprave/odoprave/gh-pages/doc/alternativne-odoprave-demo.gif)](https://odoprave.github.io/odoprave/)
 [![Alternatívne odoprave na mobile](https://raw.githubusercontent.com/odoprave/odoprave/gh-pages/doc/alternativne-odoprave-demo-mobil.gif)](https://odoprave.github.io/odoprave/)
 
 # V čom je tento projekt lepší ako štátne odoprave.info?
