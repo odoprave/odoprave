@@ -1,4 +1,6 @@
-# Alternatívne odoprave - BETA [![Slack Slovensko.Digital](https://img.shields.io/badge/Slack-Slovensko.Digital%20-brightgreen.svg)](http://slack.slovensko.digital/)
+# Alternatívne odoprave - BETA
+
+[![Docker Automated buil](https://img.shields.io/docker/automated/odoprave/odoprave.svg)]() Komunikácia: [![Slack Slovensko.Digital](https://img.shields.io/badge/Slack-Slovensko.Digital%20-brightgreen.svg)](http://slack.slovensko.digital/)
 
 Výskumný vizualizačný projekt, ktorý používa verejne dostupné dáta zo štátneho
 portálu odoprave.info.
@@ -7,11 +9,19 @@ Verejne dostupné na [https://odoprave.github.io/odoprave/](https://odoprave.git
 
 Použité technológie: HTML/CSS/JS.
 
-![Alternatívne odoprave](https://raw.githubusercontent.com/odoprave/odoprave/gh-pages/doc/alternativne-odoprave-demo.gif)
-![Alternatívne odoprave na mobile](https://raw.githubusercontent.com/odoprave/odoprave/gh-pages/doc/alternativne-odoprave-demo-mobil.gif)
+# Naštartuj si svoje odoprave
 
+Projekt je k dispozícii aj ako Docker image, založený na ngnix (ktorý má aj
+úlohu reverse proxy, pri komunikácii so štátnym odoprave.info):
 
+```
+docker run --name odoprave -d -p 80:80 odoprave/odoprave
+```
 
+# Náhľad
+
+[![Alternatívne odoprave](https://raw.githubusercontent.com/odoprave/odoprave/gh-pages/doc/alternativne-odoprave-demo.gif)(https://odoprave.github.io/odoprave/)
+[![Alternatívne odoprave na mobile](https://raw.githubusercontent.com/odoprave/odoprave/gh-pages/doc/alternativne-odoprave-demo-mobil.gif)](https://odoprave.github.io/odoprave/)
 
 # V čom je tento projekt lepší ako štátne odoprave.info?
 
@@ -49,7 +59,7 @@ https://odoprave.github.io/odoprave/labs/nsdi-google-traffic-comparison/
 Vrstvy aktuálnej premávky z NSDI a Google na jednej mape pre jednoduchšie
 vzájomné porovnanie:
 
-![Porovnanie premávky NSDI/Google](https://raw.githubusercontent.com/odoprave/odoprave/gh-pages/labs/nsdi-google-traffic-comparison/nsdi-google-traffic-comparison.gif)
+[![Porovnanie premávky NSDI/Google](https://raw.githubusercontent.com/odoprave/odoprave/gh-pages/labs/nsdi-google-traffic-comparison/nsdi-google-traffic-comparison.gif)](https://odoprave.github.io/odoprave/labs/nsdi-google-traffic-comparison/)
 
 
 **Odoprave analytics**
