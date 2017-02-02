@@ -70,25 +70,25 @@
             <div class="sidebar-pane" id="transport">
                 <h1 class="sidebar-header">Cestovné poriadky<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
                 <p>Čakáme na dobrovoľníka, ktorý implementuje túto funkcionalitu.
-                Zatiaľ odporúčame použiť <a href="http://cp.atlas.sk/vlakbus/spojenie/" target="_blank">Cp.sk</a>.</p>
+                Zatiaľ odporúčame použiť <a href="http://cp.atlas.sk/vlakbus/spojenie/" target="_blank">cp.sk</a>.</p>
             </div>
 
             <div class="sidebar-pane" id="feedback">
                 <h1 class="sidebar-header">Spätná väzba<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
                 <p>
-                <b>Jedným klikom</b> nám prosím poskytnite Váš názor na alternatívne odoprave:<br />
-                <i class="fa fa-thumbs-up" style="color: green; font-size: 200%;"></i>&nbsp;
-                <i class="fa fa-thumbs-down" style="color: red; font-size: 200%;"></i>
+                <b>Jedným klikom</b> prosím poskytnite Váš názor na alternatívne odoprave:<br />
+                <a href="#" onclick="ga('send', 'event', 'feedback', 'click', 'positive', 1); document.getElementById('fa-thumbs-up').style.color='green'; return false;"><i class="fa fa-thumbs-up" id="fa-thumbs-up" style="color: gray; font-size: 200%;"></i></a>&nbsp;
+                <a href="#" onclick="ga('send', 'event', 'feedback', 'click', 'negative', 1); document.getElementById('fa-thumbs-down').style.color='red'; return false;"><i class="fa fa-thumbs-down" id="fa-thumbs-down" style="color: gray; font-size: 200%;"></i></a>
                 </p>
                 <p>
-                Taktiež nám môžete <a href="https://docs.google.com/forms/d/e/1FAIpQLSeD26FnP02xbYaLDdVvbyOiqe2Ry-89knGcvqq2Z3nUlrUJeQ/viewform" target="_blank">napísať Vaše podnety cez formulár</a>.
+                Taktiež môžete <a href="https://docs.google.com/forms/d/e/1FAIpQLSeD26FnP02xbYaLDdVvbyOiqe2Ry-89knGcvqq2Z3nUlrUJeQ/viewform" target="_blank">napísať Vaše podnety cez formulár</a>.
                 </p>
             </div>
 
             <div class="sidebar-pane" id="settings">
                 <h1 class="sidebar-header">Nastavenia<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
                 <p>
-                <b>1. Cookies</b><br />Cookies sú použité napríklad na zapamätanie poslednej pozície na mape.
+                <b>Cookies</b><br />Cookies sú použité na zapamätanie poslednej pozície na mape.
                 V prípade problémov ich môžete vymazať.<br />
                 <a href="#" onclick="clearCookies(); return false;">Vymazať cookies</a>
                 </p>
@@ -106,7 +106,7 @@
                 </ul>
                 </p>
                 <p>Chceš sa zapojiť a vylepšiť funkcionalitu?<p>
-                Navštív <a href="https://github.com/odoprave/odoprave" target="_blank">github.com/odoprave/odoprave</a>
+                Navštív <a href="https://github.com/odoprave/odoprave" target="_blank"><i class="fa fa-github" aria-hidden="true"></i> github.com/odoprave/odoprave</a>
                 <p>
                   Pre interaktívnu komunikáciu navštív:<br />
                   <a href="http://slack.slovensko.digital/" target="_blank">
