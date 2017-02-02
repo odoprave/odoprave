@@ -1,6 +1,6 @@
 # Alternatívne odoprave - BETA [![Slack Slovensko.Digital](https://img.shields.io/badge/Slack-Slovensko.Digital%20-brightgreen.svg)](http://slack.slovensko.digital/)
 
-Výskumný vizualizačný projekt, ktorý používa verejné dostupné dáta zo štátneho
+Výskumný vizualizačný projekt, ktorý používa verejne dostupné dáta zo štátneho
 portálu odoprave.info.
 
 Verejne dostupné na [https://odoprave.github.io/odoprave/](https://odoprave.github.io/odoprave/).
