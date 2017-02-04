@@ -50,6 +50,9 @@ Inšpiráciu na vylepšenia UI/UX/funkcionalitu odporúčam hľadať v projektoc
 - https://www.google.sk/maps
 - https://www.waze.com/
 - https://mapy.cz/
+- https://tfl.gov.uk/
+
+Alebo priamo v [názoroch od používateľov](https://drive.google.com/open?id=12rvKn9tzxVOp2upSybXnpJUnxbKO7aG2WsoC1SbAyOY).
 
 
 # Experimentálne
