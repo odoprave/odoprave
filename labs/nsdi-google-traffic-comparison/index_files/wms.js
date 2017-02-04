@@ -10,7 +10,7 @@ var osmLayer = new ol.layer.Tile({
 var tileWMSLayer  = new ol.layer.Tile({
     title: 'Aktuálna premávka',
     source: new ol.source.TileWMS({
-        url: "https://odoprave.global.ssl.fastly.net/geoserver/nsdi/wms",
+        url: "https://odoprave.info/geoserver/nsdi/wms",
         params: {'LAYERS': 'nsdi:uds'},
         serverType: 'geoserver'
     }),
