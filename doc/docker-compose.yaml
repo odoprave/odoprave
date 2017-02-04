@@ -1,0 +1,4 @@
+odoprave:
+  image: odoprave/odoprave:latest
+  ports:
+    - "80:80"
