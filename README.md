@@ -7,12 +7,11 @@ portálu odoprave.info.
 
 Verejne dostupné na [https://odoprave.github.io/odoprave/](https://odoprave.github.io/odoprave/).
 
-Použité technológie: HTML/CSS/JS.
+Použité technológie: statické HTML/CSS/JS.
 
 # Naštartuj si vlastné odoprave
 
-Projekt je k dispozícii aj ako Docker image, založený na ngnix (ktorý má aj
-úlohu reverse proxy, pri komunikácii so štátnym odoprave.info):
+Projekt je k dispozícii aj ako Docker image, založený na ngnix:
 
 ```
 docker run --name odoprave -d -p 80:80 odoprave/odoprave
@@ -71,6 +70,16 @@ zaznamenaných udalostí premávky zo štátneho portálu odoprave.info
 (približne 3,5 tisíc udalostí).
 
 ![Odoprave analytics](https://raw.githubusercontent.com/odoprave/odoprave/gh-pages/labs/odoprave-analytics.gif)
+
+
+# Prevádzka
+
+Pár príkladov na provisioning/configuration management alternatívneho odoprave:
+
+- [Terraform pre Digital Ocean](https://github.com/odoprave/odoprave/tree/gh-pages/doc/terraform-do)
+- [Puppet](https://github.com/odoprave/odoprave/tree/gh-pages/doc/puppet)
+- [Ansible](https://github.com/odoprave/odoprave/tree/gh-pages/doc/ansible)
+- [Docker Compose](https://github.com/odoprave/odoprave/blob/gh-pages/doc/docker-compose.yaml)
 
 
 # Použité projekty

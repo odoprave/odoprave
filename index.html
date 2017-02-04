@@ -136,12 +136,13 @@
     // layers   - https://odoprave.info/gis/configuration/layer
     // features - https://odoprave.info/geoserver/nsdi/wms?REQUEST=GetFeatureInfo&EXCEPTIONS=application/json&BBOX=2035059.4410645328,6261721.357121639,2191602.4749925737,6418264.39104968&SERVICE=WMS&INFO_FORMAT=application/json&QUERY_LAYERS=nsdi:traffic_event,nsdi:uds&FEATURE_COUNT=50&TRANSPARENT=true&Layers=nsdi:traffic_event,nsdi:uds&WIDTH=256&HEIGHT=256&format=image/png&CQL_FILTER=(traffic_event_status='active') or (traffic_event_status='definedByValidityTimeSpec' AND ((valid_to >= '2017-01-27T23:45:12+0000' and valid_from <= '2017-01-27T23:45:12+0000') OR (valid_to IS NULL and valid_from <= '2017-01-27T23:45:12+0000'))) OR (traffic_event_status='definedByValidityTimeSpec' AND valid_from > '2017-01-27T23:45:12+0000');1=1&VERSION=1.1.1&styles=&srs=EPSG:3857&X=235&Y=245
     // services - https://odoprave.info/gis/configuration/service
-    // https://odoprave.info/pbe/api/v1/base/enums/texts
+    // texts    - https://odoprave.info/pbe/api/v1/base/enums/texts
 
     try {
         var zoom = 8;
         var center = [2226951.83, 6212416.61];
         var rotation = 0;
+        // reverse proxy
         var backend_server = 'https://odoprave.global.ssl.fastly.net/';
 
         /**
@@ -224,7 +225,7 @@
         var parser = new ol.format.WMTSCapabilities();
         var map;
 
-        fetch(backend_server + '/geoserver/gwc/service/wmts?REQUEST=getcapabilities')
+        fetch('wmts-getcapabilities.xml')
         .then(function(response) {
           return response.text();
         })
@@ -237,19 +238,19 @@
           })];
 
           // REST template, because we want to use CDN caching feature
-          options.requestEncoding = 'REST';
-          options.urls[0] = backend_server + '/rest/1d/{Layer}/{TileMatrixSet}/GetTile/1.0.0/png/{TileMatrix}/{TileCol}/{TileRow}/map.png';
+          //options.requestEncoding = 'REST';
+          //options.urls[0] = backend_server + '/rest/1d/{Layer}/{TileMatrixSet}/GetTile/1.0.0/png/{TileMatrix}/{TileCol}/{TileRow}/map.png';
 
           var options2 = ol.source.WMTS.optionsFromCapabilities(result,
               {layer: 'nsdi:base_raster_night', matrixSet: 'EPSG:900913'});
           options2.attributions = options.attributions;
-          options2.requestEncoding = options.requestEncoding;
-          options2.urls[0] = options.urls[0];
+          //options2.requestEncoding = options.requestEncoding;
+          //options2.urls[0] = options.urls[0];
           var options3 = ol.source.WMTS.optionsFromCapabilities(result,
               {layer: 'nsdi:ortosr_3857', matrixSet: 'EPSG:900913'});
           options3.attributions = options.attributions;
-          options3.requestEncoding = options.requestEncoding;
-          options3.urls[0] = backend_server + '/rest/1d/{Layer}/{TileMatrixSet}/GetTile/1.0.0/jpeg/{TileMatrix}/{TileCol}/{TileRow}/map.jpg';
+          //options3.requestEncoding = options.requestEncoding;
+          //options3.urls[0] = backend_server + '/rest/1d/{Layer}/{TileMatrixSet}/GetTile/1.0.0/jpeg/{TileMatrix}/{TileCol}/{TileRow}/map.jpg';
 
           var attribution = new ol.control.Attribution({
             collapsible: false
@@ -264,24 +265,24 @@
                     'title': 'Mapy',
                     layers: [
                         new ol.layer.Tile({
-                            title: 'Štandarná NSDI',
+                            title: 'Štandardná NSDI',
                             type: 'base',
                             visible: true,
-                            preload: 10,
+                            preload: 11,
                             source: new ol.source.WMTS(options)
                         }),
                         new ol.layer.Tile({
                             title: 'Nočná NSDI',
                             type: 'base',
                             visible: false,
-                            preload: 10,
+                            preload: 11,
                             source: new ol.source.WMTS(options2)
                         }),
                         new ol.layer.Tile({
                             title: 'Letecká NSDI',
                             type: 'base',
                             visible: false,
-                            preload: 10,
+                            preload: 11,
                             source: new ol.source.WMTS(options3)
                         }),
                         new ol.layer.Tile({
@@ -298,7 +299,7 @@
                         new ol.layer.Tile({
                             title: 'Aktuálna premávka',
                             source: new ol.source.TileWMS({
-                                url: backend_server + "/geoserver/nsdi/wms",
+                                url: "https://odoprave.info/geoserver/nsdi/wms",
                                 params: {'LAYERS': 'nsdi:uds'},
                                 serverType: 'geoserver'
                             })
@@ -306,7 +307,7 @@
                         new ol.layer.Tile({
                             title: 'Kolóny',
                             source: new ol.source.TileWMS({
-                                url: backend_server + "/geoserver/nsdi/wms",
+                                url: "https://odoprave.info/geoserver/nsdi/wms",
                                 params: {'LAYERS': 'nsdi:traffic_queue'},
                                 serverType: 'geoserver'
                             })
@@ -314,7 +315,7 @@
                         new ol.layer.Tile({
                             title: 'Aktuálne udalosti',
                             source: new ol.source.TileWMS({
-                                url: backend_server + "/geoserver/nsdi/wms",
+                                url: "https://odoprave.info/geoserver/nsdi/wms",
                                 params: {'LAYERS': 'nsdi:traffic_event',
                                          CQL_FILTER: "[(traffic_event_status='active') or (traffic_event_status='definedByValidityTimeSpec' AND ((valid_to >= '"+new Date().getFullYear()+"-"+(new Date().getMonth()+1)+"-"+new Date().getDate()+"T"+new Date().getHours()+":"+new Date().getMinutes()+":"+new Date().getSeconds()+"+0000' and valid_from <= '"+new Date().getFullYear()+"-"+(new Date().getMonth()+1)+"-"+new Date().getDate()+"T"+new Date().getHours()+":"+new Date().getMinutes()+":"+new Date().getSeconds()+"+0000') OR (valid_to IS NULL and valid_from <= '"+new Date().getFullYear()+"-"+(new Date().getMonth()+1)+"-"+new Date().getDate()+"T"+new Date().getHours()+":"+new Date().getMinutes()+":"+new Date().getSeconds()+"+0000'))) OR (traffic_event_status='definedByValidityTimeSpec' AND valid_from > '"+new Date().getFullYear()+"-"+(new Date().getMonth()+1)+"-"+new Date().getDate()+"T"+new Date().getHours()+":"+new Date().getMinutes()+":"+new Date().getSeconds()+"+0000')]"
                                 },
@@ -325,7 +326,7 @@
                         new ol.layer.Tile({
                             title: 'Plánované udalosti',
                             source: new ol.source.TileWMS({
-                                url: backend_server + "/geoserver/nsdi/wms",
+                                url: "https://odoprave.info/geoserver/nsdi/wms",
                                 params: {'LAYERS': 'nsdi:traffic_event',
                                          CQL_FILTER: "[(traffic_event_status='definedByValidityTimeSpec' AND valid_from > '"+new Date().getFullYear()+"-"+(new Date().getMonth()+1)+"-"+new Date().getDate()+"T"+new Date().getHours()+":"+new Date().getMinutes()+":"+new Date().getSeconds()+"+00:00')]"
                                 },
@@ -336,7 +337,7 @@
                         new ol.layer.Tile({
                             title: 'Kamery, sčítače',
                             source: new ol.source.TileWMS({
-                                url: backend_server + "/geoserver/nsdi/wms",
+                                url: "https://odoprave.info/geoserver/nsdi/wms",
                                 params: {'LAYERS': 'nsdi:v_tech_equipment'},
                                 serverType: 'geoserver'
                             }),
@@ -345,7 +346,7 @@
                         new ol.layer.Tile({
                             title: 'Cyklocesty',
                             source: new ol.source.TileWMS({
-                                url: backend_server + "/geoserver/nsdi/wms",
+                                url: "https://odoprave.info/geoserver/nsdi/wms",
                                 params: {'LAYERS': 'nsdi:cyclo_track'},
                                 serverType: 'geoserver'
                             }),
@@ -354,7 +355,7 @@
                         new ol.layer.Tile({
                             title: 'Verejná doprava',
                             source: new ol.source.TileWMS({
-                                url: backend_server + "/geoserver/nsdi/wms",
+                                url: "https://odoprave.info/geoserver/nsdi/wms",
                                 params: {'LAYERS': 'nsdi:poi_traffic'},
                                 serverType: 'geoserver',
                             }),
@@ -363,7 +364,7 @@
                         new ol.layer.Tile({
                             title: 'Popisy leteckej mapy',
                             source: new ol.source.TileWMS({
-                                url: backend_server + "/geoserver/nsdi/wms",
+                                url: "https://odoprave.info/geoserver/nsdi/wms",
                                 params: {'LAYERS': 'nsdi:label'},
                                 serverType: 'geoserver',
                             }),
@@ -454,7 +455,7 @@
 
          // handle geolocation error.
          geolocation.on('error', function(error) {
-           // todo
+           // todo try another geolocation options
            alert("Geolocation problem: " + error.message);
            ga('send', 'exception', {
              'exDescription': "Geolocation problem: " + error.message,
